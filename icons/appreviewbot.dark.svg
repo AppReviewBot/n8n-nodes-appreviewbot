@@ -1,0 +1,8 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded square background -->
+  <rect width="40" height="40" rx="8" fill="#6366F1"/>
+  <!-- Chat bubble -->
+  <path d="M8 10C8 8.34315 9.34315 7 11 7H29C30.6569 7 32 8.34315 32 10V24C32 25.6569 30.6569 27 29 27H23L20 31L17 27H11C9.34315 27 8 25.6569 8 24V10Z" fill="#F8F8FF"/>
+  <!-- Star -->
+  <path d="M20 11.5L21.5451 16.2553H26.5106L22.4827 19.1893L24.0279 23.9447L20 21.0107L15.9721 23.9447L17.5173 19.1893L13.4894 16.2553H18.4549L20 11.5Z" fill="#6366F1"/>
+</svg>
