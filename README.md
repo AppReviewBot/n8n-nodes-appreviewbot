@@ -2,6 +2,8 @@
 
 An n8n community node for [AppReviewBot](https://appreviewbot.com) — fetch and monitor Apple App Store and Google Play reviews in your n8n workflows.
 
+Full setup guide: [n8n Integration docs](https://appreviewbot.com/docs/guides/n8n-integration)
+
 ## What it does
 
 AppReviewBot monitors app store reviews and surfaces them in real time. This node lets you:
@@ -43,14 +45,17 @@ You need an AppReviewBot API key (format: `arb_...`).
 
 ### AppReviewBot Trigger node (polling)
 
-Polls AppReviewBot on a schedule and triggers the workflow when new reviews arrive.
+Polls AppReviewBot on your **workflow schedule** and triggers the workflow when new reviews arrive.
 
+- Polling interval is set in the n8n workflow trigger schedule, not in this node
 - Select the app to watch
 - Optional filters: country, rating
 - On the first activation, the watermark is set to _now_ (no backfill)
 - In **manual test mode**, returns the single most recent review
 
 The trigger uses `content_updated_at` as a watermark, stored in workflow static data.
+
+See the [n8n Integration guide](https://appreviewbot.com/docs/guides/n8n-integration) for full setup details.
 
 ## Review object fields
 

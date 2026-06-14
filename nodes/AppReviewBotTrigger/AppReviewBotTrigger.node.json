@@ -6,12 +6,12 @@
 	"resources": {
 		"credentialDocumentation": [
 			{
-				"url": "https://appreviewbot.com"
+				"url": "https://appreviewbot.com/docs/guides/n8n-integration"
 			}
 		],
 		"primaryDocumentation": [
 			{
-				"url": "https://appreviewbot.com"
+				"url": "https://appreviewbot.com/docs/guides/n8n-integration"
 			}
 		]
 	}

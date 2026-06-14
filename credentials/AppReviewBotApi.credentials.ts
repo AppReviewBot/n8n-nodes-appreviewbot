@@ -16,7 +16,7 @@ export class AppReviewBotApi implements ICredentialType {
 		dark: 'file:../icons/appreviewbot.dark.svg',
 	};
 
-	documentationUrl = 'https://appreviewbot.com';
+	documentationUrl = 'https://appreviewbot.com/docs/guides/n8n-integration';
 
 	properties: INodeProperties[] = [
 		{

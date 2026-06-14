@@ -60,11 +60,37 @@ export class AppReviewBotTrigger implements INodeType {
 		version: 1,
 		subtitle: '=Polling: {{$parameter["appRef"]}}',
 		description:
-			'Polls AppReviewBot for new Apple App Store and Google Play reviews and triggers the workflow when new reviews arrive',
+			'Polls AppReviewBot on your workflow schedule for new Apple App Store and Google Play reviews. Uses a content_updated_at watermark — only reviews arriving after activation trigger the workflow.',
 		defaults: {
 			name: 'AppReviewBot Trigger',
 		},
 		polling: true,
+		activationMessage:
+			'AppReviewBot is now polling for new reviews. The first run records the current time — only reviews arriving after activation will trigger the workflow.',
+		triggerPanel: {
+			header: 'Polling for new reviews',
+			executionsHelp: {
+				inactive:
+					'Workflow is inactive. Activate it to start polling on your configured schedule.',
+				active:
+					'Polling on your workflow schedule. New reviews (by content_updated_at) will trigger downstream nodes.',
+			},
+			activationHint: {
+				inactive:
+					'On first activation, the watermark is set to now — older reviews are not backfilled.',
+				active:
+					'Use "Test workflow" to fetch the latest review without advancing the watermark.',
+			},
+		},
+		hints: [
+			{
+				message:
+					'Polling interval is set in the workflow trigger schedule (e.g. every 5 minutes), not in this node. See https://appreviewbot.com/docs/guides/n8n-integration for setup details.',
+				type: 'info',
+				location: 'ndv',
+				whenToDisplay: 'always',
+			},
+		],
 		inputs: [],
 		outputs: [NodeConnectionTypes.Main],
 		credentials: [
@@ -74,6 +100,16 @@ export class AppReviewBotTrigger implements INodeType {
 			},
 		],
 		properties: [
+			{
+				displayName:
+					'This node polls on your workflow schedule. On first activation the watermark is set to now (no backfill). Manual test returns the latest review. Normal polling fetches reviews newer than the stored watermark.',
+				name: 'pollingNotice',
+				type: 'notice',
+				default: '',
+				displayOptions: {
+					show: {},
+				},
+			},
 			{
 				displayName: 'App',
 				name: 'appRef',
