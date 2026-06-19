@@ -32,7 +32,8 @@
 		"lint": "n8n-node lint",
 		"lint:fix": "n8n-node lint --fix",
 		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
+		"prepublishOnly": "n8n-node prerelease",
+		"publish:local": "npm run lint && npm run build && RELEASE_MODE=true npm publish --access public --provenance=false"
 	},
 	"files": [
 		"dist"
