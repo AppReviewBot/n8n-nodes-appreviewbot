@@ -19,7 +19,11 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/AppReviewBot/n8n-nodes-appreviewbot.git"
+		"url": "git+https://github.com/AppReviewBot/n8n-nodes-appreviewbot.git"
+	},
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
 	},
 	"scripts": {
 		"build": "n8n-node build",
