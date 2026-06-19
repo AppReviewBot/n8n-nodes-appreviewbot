@@ -1,7 +1,7 @@
 {
 	"name": "n8n-nodes-appreviewbot",
-	"version": "0.1.1",
-	"description": "n8n community node for AppReviewBot — fetch and monitor Apple App Store & Google Play reviews",
+	"version": "0.2.0",
+	"description": "n8n community node for AppReviewBot — fetch Apple App Store and Google Play reviews",
 	"license": "MIT",
 	"homepage": "https://appreviewbot.com",
 	"keywords": [
@@ -40,8 +40,7 @@
 			"dist/credentials/AppReviewBotApi.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/AppReviewBot/AppReviewBot.node.js",
-			"dist/nodes/AppReviewBotTrigger/AppReviewBotTrigger.node.js"
+			"dist/nodes/AppReviewBot/AppReviewBot.node.js"
 		]
 	},
 	"devDependencies": {
