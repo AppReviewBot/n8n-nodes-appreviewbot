@@ -62,6 +62,15 @@ See the [n8n Integration guide](https://appreviewbot.com/docs/guides/n8n-integra
 | `country` | Two-letter country code |
 | `store_permalink` | Link to the review in the store |
 
+## Development
+
+Install the n8n node CLI globally, then install project dependencies:
+
+```bash
+npm install --global @n8n/node-cli
+npm install
+```
+
 ## Available scripts
 
 | Script | Description |
@@ -70,6 +79,7 @@ See the [n8n Integration guide](https://appreviewbot.com/docs/guides/n8n-integra
 | `npm run build` | Compile TypeScript to `dist/` |
 | `npm run lint` | Check for linting errors |
 | `npm run lint:fix` | Auto-fix linting issues |
+| `npm run release` | Bump version, tag, and push (triggers npm publish via GitHub Actions) |
 
 ## Compatibility
 
