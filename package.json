@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-appreviewbot",
-	"version": "0.2.0",
+	"version": "0.2.1",
 	"description": "n8n community node for AppReviewBot — fetch Apple App Store and Google Play reviews",
 	"license": "MIT",
 	"homepage": "https://appreviewbot.com",
